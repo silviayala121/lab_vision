@@ -82,11 +82,13 @@ The [imread](http://www.mathworks.com/help/matlab/ref/imread.html) command is us
     What is the dimension of the output?
 
     >   Answer
+    256x256
 
 3.  Read the ``4.2.03`` image
     What is the dimension of the output?
 
     >   Answer
+    512x512x3
 
 ## Displaying Images
 
@@ -100,14 +102,23 @@ The following commands can be used for displaying images
 3.  What are the differences?
 
     >   Answer
+    image creates an image graphics object by interpreting each element in a matrix as an index into the figure's colormap or directly as RGB values, depending on the data specified. 
+    imshow(I) displays the image I in a Handle Graphics® figure, where I is a grayscale, RGB (truecolor), or binary image. For binary images, imshow displays pixels with the value 0 (zero) as black and 1 as white.
+    
 
 ## Writing Images
 
 The [imwrite](http://www.mathworks.com/help/matlab/ref/imwrite.html) image is used for writing images to disk
 
 1.  Look at the manual page
-2.  Write one of the images from before as png and as jpg
+2.  Write one of the images from before as png and as jpg 
+>> imwrite(mico,'mico.png')
+>> imwrite(mico,'mico.jpg');
+>> imwrite(reloj,'reloj.png');
+>> imwrite(reloj,'reloj.jpg');
 3.  Write a matlab function that takes the path of an image and converts it to jpg
+>> imwrite(reloj,'reloj.jpg');
+>> imwrite(mico,'mico.jpg');
 
 ## Matlab and the shell
 
