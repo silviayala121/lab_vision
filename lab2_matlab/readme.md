@@ -82,13 +82,15 @@ The [imread](http://www.mathworks.com/help/matlab/ref/imread.html) command is us
     What is the dimension of the output?
 
     >   Answer
-    256x256
+    a=imread('5.1.12.tiff');
+    256x256 uint8
 
 3.  Read the ``4.2.03`` image
     What is the dimension of the output?
 
     >   Answer
-    512x512x3
+    b=imread('4.2.03.tiff');
+    512x512x3 uint8
 
 ## Displaying Images
 
@@ -99,24 +101,39 @@ The following commands can be used for displaying images
 
 1.  Look at their manual pages
 2.  Try displaying the images read in the previous point using both commands
+
 3.  What are the differences?
 
     >   Answer
-    image creates an image graphics object by interpreting each element in a matrix as an index into the figure's colormap or directly as RGB values, depending on the data specified. 
-    imshow(I) displays the image I in a Handle Graphics® figure, where I is a grayscale, RGB (truecolor), or binary image. For binary images, imshow displays pixels with the value 0 (zero) as black and 1 as white.
-    
+-image(I) crea la grafica de un objeto  mediante la interpretación de los elementos de la matriz como un indice en en el directorio de colores de la figura o directamente como valores RGB, dependiendo de los datos especificados. 
+Al ejecutar este comando se observa que la figura se muestra con ejes numerícos
+-imshow(I) muestra la figura I a través de Graphics® figure, donde I esta en escala de grices, RGB (truecolor), o una imagen binaria. Para imagenes binarias, imshow muestra los pixeles con el valor 0 (cero) para negro y 1 para balnco. Esta función permite visualizar la imagen sin ejes
+ejemplos:
+mico=b;    % declara la matriz de la iamgen como una variable 
+reloj=a;   % declara la matriz de la iamgen como una variable 
+image(mico)   % muestra la figura como una matriz, con ejes numericos  
+image(reloj)  
+imshow(mico)  % muestra la figura como una imagen
+imshow(reloj)
 
+    
 ## Writing Images
 
 The [imwrite](http://www.mathworks.com/help/matlab/ref/imwrite.html) image is used for writing images to disk
 
 1.  Look at the manual page
+
 2.  Write one of the images from before as png and as jpg 
->> imwrite(mico,'mico.png')
->> imwrite(mico,'mico.jpg');
->> imwrite(reloj,'reloj.png');
->> imwrite(reloj,'reloj.jpg');
+
+   >   Answer 
+   imwrite(mico,'mico.png');
+   imwrite(mico,'mico.jpg');
+   imwrite(reloj,'reloj.png');
+   imwrite(reloj,'reloj.jpg');
+
 3.  Write a matlab function that takes the path of an image and converts it to jpg
+
+   >   Answer
 >> imwrite(reloj,'reloj.jpg');
 >> imwrite(mico,'mico.jpg');
 
