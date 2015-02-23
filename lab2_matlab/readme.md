@@ -107,8 +107,10 @@ The following commands can be used for displaying images
     >   Answer
 -image(I) crea la grafica de un objeto  mediante la interpretación de los elementos de la matriz como un indice en en el directorio de colores de la figura o directamente como valores RGB, dependiendo de los datos especificados. 
 Al ejecutar este comando se observa que la figura se muestra con ejes numerícos
--imshow(I) muestra la figura I a través de Graphics® figure, donde I esta en escala de grices, RGB (truecolor), o una imagen binaria. Para imagenes binarias, imshow muestra los pixeles con el valor 0 (cero) para negro y 1 para balnco. Esta función permite visualizar la imagen sin ejes
+-imshow(I) muestra la figura I a través de Graphics® figure, donde I esta en escala de grices, RGB (truecolor), o una imagen binaria. Para imagenes binarias, imshow muestra los pixeles con el valor 0 (cero) para negro y 1 para balnco. Esta función permite visualizar la imagen sin ejes.
+
 ejemplos:
+
 mico=b;    % declara la matriz de la iamgen como una variable 
 reloj=a;   % declara la matriz de la iamgen como una variable 
 image(mico)   % muestra la figura como una matriz, con ejes numericos  
