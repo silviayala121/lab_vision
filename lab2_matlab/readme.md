@@ -241,8 +241,8 @@ The [imsharpen](http://www.mathworks.com/help/images/ref/imsharpen.html) functio
 
 1.  Sharp the ``5.1.12`` image. What do you notice?
 
-    > Answer- Con imsharpen la imagen tiene mas nitidez o definición 
-y = imread('4.1.04.tiff');
+> Answer- Con imsharpen la imagen tiene mas nitidez o definición 
+y = imread('5.1.12.tiff');
 B = imsharpen(y);
 figure, imshow(y)
 figure, imshow(B)
@@ -251,6 +251,7 @@ figure, imshow(B)
 2.  Sharp a blurred image. What do you notice?
 
     > Answer
+    Pierde definición
 
 ### Edge detection
 
