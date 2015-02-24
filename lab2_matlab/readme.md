@@ -233,7 +233,7 @@ which can be otained from [fspecial](http://www.mathworks.com/help/images/ref/fs
 2.  Try different sizes for the filters
 3.  What differences do you notice?
 
-    > con el foltro gaussiano se pierde la imagen, el imfilter hace ver la imagen mas borrosa 
+    > con el filtro gaussiano se pierde la imagen, el imfilter hace ver la imagen mas borrosa 
 
 ### Sharpen
 
@@ -241,7 +241,12 @@ The [imsharpen](http://www.mathworks.com/help/images/ref/imsharpen.html) functio
 
 1.  Sharp the ``5.1.12`` image. What do you notice?
 
-    > Answer
+    > Answer- Con imsharpen la imagen tiene mas nitidez o definición 
+y = imread('4.1.04.tiff');
+B = imsharpen(y);
+figure, imshow(y)
+figure, imshow(B)
+
 
 2.  Sharp a blurred image. What do you notice?
 
