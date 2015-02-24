@@ -230,12 +230,10 @@ To blur or smooth an image we can use the mean filter described above. We can al
 which can be otained from [fspecial](http://www.mathworks.com/help/images/ref/fspecial.html).
 
 1.  Smooth an image using average and gaussian filter
-
-
 2.  Try different sizes for the filters
 3.  What differences do you notice?
 
-    > Answer
+    > con el foltro gaussiano se pierde la imagen, el imfilter hace ver la imagen mas borrosa 
 
 ### Sharpen
 
