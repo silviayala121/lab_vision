@@ -178,9 +178,26 @@ We can do this to simulate difficult capture conditions, and evaluate the algori
 
 1.  Read the manual page
 2.  Try the diffente noise types, and save the noisy images to the repository (5 images)
+
+> Answer
+cd imagenes_vision,
+a = imread('4.1.04.tiff');
+figure, imshow(a)
+b = imnoise(a,'salt & pepper',0.1);
+figure, imshow(b)
+b = imnoise(a,'salt & pepper',0.01);
+figure, imshow(b)
+c = imnoise(a,'gaussian',0.1);
+figure, imshow(c)
+d = imnoise(a,'poisson');
+figure, imshow(d)
+e = imnoise(a,'speckle',0.1);
+figure, imshow(e)
+
 3.  Try saving noisy images as jpg, what happens?
 
-    > Answer
+> Answer
+al guardarla en este formato hace que los pixeles de la imagen sean mucho mas grandes
 
 ### Median filter
 
