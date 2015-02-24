@@ -211,7 +211,16 @@ These filters can be applied to a an image in order to remove noise.
 3.  Try different sizes for the filters
 4.  Which filter works best for salt & pepper noise?
 
-    > Answer
+    > Answer - imfilter
+I = gpuArray(imread('4.1.04.tiff'));
+J = imnoise(I,'salt & pepper',0.02);
+h = fspecial('motion',50,45);
+K = imfilter(I,h);
+X = medfilt2(I,h);
+figure, imshow(I)
+figure, imshow(J)
+figure, imshow(K)
+figure, imshow(X)
 
 For more on noise removal read http://www.mathworks.com/help/images/noise-removal.html
 
@@ -220,7 +229,9 @@ For more on noise removal read http://www.mathworks.com/help/images/noise-remova
 To blur or smooth an image we can use the mean filter described above. We can also use the gaussian filter
 which can be otained from [fspecial](http://www.mathworks.com/help/images/ref/fspecial.html).
 
-1.  Smooth an image using average and gaussian filters
+1.  Smooth an image using average and gaussian filter
+
+
 2.  Try different sizes for the filters
 3.  What differences do you notice?
 
