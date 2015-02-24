@@ -136,8 +136,18 @@ The [imwrite](http://www.mathworks.com/help/matlab/ref/imwrite.html) image is us
 3.  Write a matlab function that takes the path of an image and converts it to jpg
 
    >   Answer
->> imwrite(reloj,'reloj.jpg');
->> imwrite(mico,'mico.jpg');
+cd imagenes_vision
+x=dir;
+n=0;
+ext= '.jpg'
+for i=1:44
+    C{i}=x(i+2).name;
+    a= imread (C{i});
+    n=1+n;
+    aux= num2str (n);
+    s = strcat(aux,ext);
+    imwrite(a,s);
+end
 
 ## Matlab and the shell
 
